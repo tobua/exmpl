@@ -1,14 +1,18 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/naminho/webpack-react-pdf/master/logo.svg?sanitize=true" alt="exmpl">
+  <img src="https://raw.githubusercontent.com/naminho/exmpl/master/logo.svg?sanitize=true" alt="exmpl">
 </p>
 
 # exmpl
 
 > Quickly create stylish previews for your digital creations
 
+## Installation
+
 ```
 npm i exmpl
 ```
+
+## Getting Started
 
 Just add it to your `HTML` files
 
@@ -32,4 +36,12 @@ or if you are already bundling your `CSS`
 
 ```
 import 'exmpl'
+```
+
+## Development
+
+To adapt the stylesheet simply change `styles.css` and run the examples with:
+
+```
+npm start
 ```
