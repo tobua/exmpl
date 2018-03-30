@@ -1,0 +1,28 @@
+{
+  "name": "exmpl",
+  "description": "CSS stylesheet to quickly demonstrate and document your creation.",
+  "version": "1.0.0",
+  "author": "Matthias Giger",
+  "license": "MIT",
+  "main": "styles.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naminho/exmpl.git"
+  },
+  "files": [
+    "styles.css"
+  ],
+  "scripts": {
+    "start": "open examples/index.html"
+  },
+  "keywords": [
+    "stylesheet",
+    "plugin",
+    "preview",
+    "examples",
+    "css",
+    "js",
+    "javascript",
+    "library"
+  ]
+}
