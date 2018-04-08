@@ -74,10 +74,11 @@ img {
 }
 
 button {
+  margin-bottom: 1rem;
   background: black;
   color: white;
   padding: 1rem;
-  border: none;
+  border: 1px solid black;
   outline: none;
   text-decoration: none;
   font-size: 1.6rem;
@@ -130,4 +131,19 @@ pre {
   font-size: 0.875em;
   font-weight: 500;
   overflow: auto;
+}
+
+input {
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  padding: 1rem;
+  outline: none;
+  font-size: 1.6rem;
+  box-sizing: content-box;
+}
+
+label {
+  padding-bottom: 0.5rem;
+  display: block;
+  font-size: 1.2rem;
 }
