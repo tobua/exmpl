@@ -1,0 +1,5 @@
+body:not([extend-existing-tag]) {
+  padding: 4rem;
+  max-width: 100rem; /* can this be removed? */
+  margin: 0 auto;
+}

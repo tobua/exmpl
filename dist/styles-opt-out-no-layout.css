@@ -1,57 +1,58 @@
-html {
+html:not([class]) {
   /* 1rem = 10px */
   font-size: 62.5%;
 }
 
-body {
+body:not([class]) {
   font-size: 1.6rem;
   font-family: sans-serif;
-  padding: 4rem;
-  max-width: 100rem;
-  margin: 0 auto;
 }
 
-h1 {
+h1:not([class]) {
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0;
   font-size: 4rem;
 }
 
-h2 {
+h2:not([class]) {
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
   margin: 0;
   font-size: 3.2rem;
 }
 
-h3 {
+h3:not([class]) {
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
   margin: 0;
   font-size: 2.8rem;
 }
 
-h4 {
+h4:not([class]) {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
   margin: 0;
   font-size: 2.4rem;
 }
 
-ul {
+ul:not([class]) {
   padding-top: 1rem;
   padding-bottom: 1rem;
   list-style: none;
   padding: 0;
 }
 
-ul li {
+ul:not([class]) li:not([class]) {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
 
-a {
+ul:not([class]) ul:not([class]) {
+  padding-left: 1rem;
+}
+
+a:not([class]) {
   font-weight: 600;
   color: black;
   text-decoration: none;
@@ -60,12 +61,12 @@ a {
   margin-bottom: 5px;
 }
 
-a:hover {
+a:not([class]):hover {
   padding-bottom: 2px;
   box-shadow: inset 0 -1px 0 0 black;
 }
 
-img {
+img:not([class]) {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin: 0 auto;
@@ -73,7 +74,7 @@ img {
   display: block;
 }
 
-button {
+button:not([class]) {
   margin-bottom: 1rem;
   background: black;
   color: white;
@@ -82,39 +83,56 @@ button {
   outline: none;
   text-decoration: none;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 
-button:hover {
+button:not([class]):hover {
   box-shadow: none;
   background: darkgray;
 }
 
-table {
+table:not([class]) {
   text-align: left;
   border-collapse: collapse;
   overflow: auto;
 }
 
-tr {
-
-}
-
-th {
+th:not([class]) {
   padding: 1rem;
   border-bottom: 1px solid black;
 }
 
-td {
+td:not([class]) {
   padding: 1rem;
   border-bottom: 1px solid lightgray;
 }
 
-iframe {
+iframe:not([class]) {
   border: 0;
 }
 
-code,
-pre {
+input:not([class]) {
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  padding: 1rem;
+  outline: none;
+  font-size: 1.6rem;
+  box-sizing: content-box;
+}
+
+label:not([class]) {
+  padding-bottom: 0.5rem;
+  display: block;
+  font-size: 1.2rem;
+}
+
+code:not([class]) {
+  font-family: monospace;
+  background-color: #F8F8F8;
+  border-radius: 3px;
+}
+
+pre:not([class]) {
   font-family: monospace;
   text-shadow: 0 1px white;
   white-space: pre;
@@ -131,19 +149,4 @@ pre {
   font-size: 0.875em;
   font-weight: 500;
   overflow: auto;
-}
-
-input {
-  margin-bottom: 1rem;
-  border: 1px solid black;
-  padding: 1rem;
-  outline: none;
-  font-size: 1.6rem;
-  box-sizing: content-box;
-}
-
-label {
-  padding-bottom: 0.5rem;
-  display: block;
-  font-size: 1.2rem;
 }
