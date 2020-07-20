@@ -1,7 +1,7 @@
 {
   "name": "exmpl",
   "description": "CSS stylesheet to quickly demonstrate and document your creation.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Matthias Giger",
   "license": "MIT",
   "main": "dist/styles.css",
