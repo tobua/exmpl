@@ -5,9 +5,6 @@ const mkdirp = require('mkdirp')
 const destinationDirectory = './dist'
 
 module.exports = (content, name) => {
-    mkdirp(destinationDirectory)
-    fs.writeFileSync(
-        path.join(destinationDirectory, name),
-        content
-    )
+  mkdirp(destinationDirectory)
+  fs.writeFileSync(path.join(destinationDirectory, name), content)
 }

@@ -14,8 +14,12 @@
     "mkdirp": "^1.0.4",
     "postcss": "^7.0.32",
     "postcss-tags-without-class": "^1.0.1",
+    "prettier": "^2.0.5",
     "sass": "^1.26.10"
   },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
   },
   "files": [
     "dist"
