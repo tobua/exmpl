@@ -16,10 +16,10 @@ npm i exmpl
 
 Just add it to your `HTML` files
 
-```
+```html
 <html>
   <head>
-    <link href="node_modules/exmpl/dist/styles.css" rel="stylesheet">
+    <link href="node_modules/exmpl/dist/styles.css" rel="stylesheet" />
   </head>
   <body>
     <h1>Plugin Examples</h1>

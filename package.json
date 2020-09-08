@@ -7,14 +7,14 @@
   "main": "dist/styles.css",
   "repository": "naminho/exmpl",
   "scripts": {
-    "start": "open examples/index.html",
+    "start": "open docs/index.html",
     "build": "node build/index.js"
   },
   "devDependencies": {
     "mkdirp": "^1.0.4",
     "postcss": "^7.0.32",
     "postcss-tags-without-class": "^1.0.1",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
     "sass": "^1.26.10"
   },
   "prettier": {
