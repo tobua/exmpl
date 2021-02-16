@@ -1,62 +1,30 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/naminho/exmpl/master/logo.svg?sanitize=true" alt="exmpl">
-</p>
-
 # exmpl
 
-> Quickly create stylish previews for your digital creations
+<img align="right" src="https://raw.githubusercontent.com/naminho/exmpl/master/logo.svg?sanitize=true" width="20%" alt="exmpl" />
 
-## Installation
+Quickly create stylish previews for your digital creations
+
+> See the [Version 1](https://github.com/tobua/exmpl/tree/release/1.0.3) branch for the old CSS based version documentation.
+
+[![exmpl Demo](https://img.shields.io/static/v1?label=exmpl&message=Demo&color=brightgreen)](https://tobua.github.io/exmpl)
+
+## Installation & Usage
 
 ```
 npm i exmpl
 ```
 
-## Getting Started
+```jsx
+import React from 'react'
+import { render } from 'react-dom'
+import { Exmpl, Code } from 'exmpl'
 
-Just add it to your `HTML` files
-
-```html
-<html>
-  <head>
-    <link href="node_modules/exmpl/dist/styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1>Plugin Examples</h1>
-    <ul>
-      <li>
-        <a href="first.html">First Feature</a>
-      </li>
-    </ul>
-  </body>
-</html>
-```
-
-or if you are already bundling your `CSS`
-
-```
-import 'exmpl'
-```
-
-## Variants
-
-`styles-no-layout.css`
-
-Without layout, useful when you want your own layout.
-
-`styles-opt-out.css`
-
-Opt-out of exmpl styling by setting a class attribute on the tags. Can be used
-to mix documentation and already styled result markup.
-
-`styles-opt-out-no-layout.css`
-
-Combination of the two above.
-
-## Development
-
-To adapt the stylesheet simply change the `SASS` files inside `src` and and generate the new assets with
-
-```
-npm run build
+render(
+  <Exmpl title="exmpl Demo" npm="exmpl" github="tobua/exmpl">
+    <p>This is the introduction.</p>
+    <h2>Installation & Usage</h2>
+    <Code>{`npm i exmpl`}</Code>
+  </Exmpl>,
+  document.body
+)
 ```

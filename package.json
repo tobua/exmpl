@@ -1,37 +1,47 @@
 {
   "name": "exmpl",
-  "description": "CSS stylesheet to quickly demonstrate and document your creation.",
-  "version": "1.0.3",
-  "author": "Matthias Giger",
+  "description": "React components to quickly demonstrate and document your creation.",
+  "version": "2.0.0",
+  "repository": "github:tobua/exmpl",
+  "homepage": "https://tobua.github.io/exmpl",
   "license": "MIT",
-  "main": "dist/styles.css",
-  "repository": "naminho/exmpl",
+  "author": "Matthias Giger",
   "scripts": {
-    "start": "open docs/index.html",
-    "build": "node build/index.js"
+    "build": "padua build",
+    "start": "padua watch"
   },
-  "devDependencies": {
-    "mkdirp": "^1.0.4",
-    "postcss": "^7.0.32",
-    "postcss-tags-without-class": "^1.0.1",
-    "prettier": "^2.1.1",
-    "sass": "^1.26.10"
+  "padua": {
+    "esbuild": {
+      "external": [
+        "react",
+        "../asset/*"
+      ]
+    },
+    "tsconfig": {
+      "include": [
+        "declarations.d.ts"
+      ]
+    }
   },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false
+  "peerDependencies": {
+    "react": "^17.0.1"
   },
+  "main": "dist/index.js",
+  "source": "index.tsx",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "asset"
   ],
-  "keywords": [
-    "stylesheet",
-    "plugin",
-    "preview",
-    "examples",
-    "css",
-    "js",
-    "javascript",
-    "library"
-  ]
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "padua": "^0.2.5"
+  },
+  "prettier": "padua/configuration/.prettierrc.json",
+  "eslintConfig": {
+    "extends": "./node_modules/padua/configuration/eslint.cjs"
+  },
+  "engines": {
+    "node": ">= 14"
+  }
 }

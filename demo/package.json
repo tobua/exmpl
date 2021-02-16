@@ -1,0 +1,13 @@
+{
+  "papua": {
+    "title": "exmpl Demo"
+  },
+  "dependencies": {
+    "papua": "^0.1.14",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "localDependencies": {
+    "exmpl": ".."
+  }
+}
