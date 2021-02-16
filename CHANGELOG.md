@@ -1,0 +1,10 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.0.0](https://github.com/tobua/exmpl/compare/v1.0.1...v2.0.0) (2021-02-16)
+
+
+### Features
+
+* **general:** version 2 rewritten in React ([785e762](https://github.com/tobua/exmpl/commit/785e7627f809dd4847ae31b03e3bee94732e0af6))
