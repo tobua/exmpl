@@ -7,8 +7,8 @@
   "license": "MIT",
   "author": "Matthias Giger",
   "scripts": {
-    "build": "padua build",
-    "start": "padua watch"
+    "start": "padua watch",
+    "build": "padua build"
   },
   "padua": {
     "esbuild": {
@@ -27,6 +27,7 @@
     "react": "^17.0.1"
   },
   "main": "dist/index.js",
+  "sideEffects": false,
   "source": "index.tsx",
   "types": "dist/index.d.ts",
   "files": [
@@ -34,8 +35,8 @@
     "asset"
   ],
   "devDependencies": {
-    "@types/react": "^17.0.2",
-    "padua": "^0.2.5"
+    "@types/react": "^17.0.3",
+    "padua": "^0.3.0"
   },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {

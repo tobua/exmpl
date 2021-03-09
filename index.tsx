@@ -54,6 +54,7 @@ const codeStyles = {
   borderRadius: 8,
   padding: 10,
   boxShadow: 'inset 0 0 3px #000000',
+  overflow: 'auto',
 }
 
 export const Code = ({ children }: { children: string }) => (
