@@ -1,7 +1,15 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, ReactChild, ReactElement } from 'react'
 // Relative to dist folder after build.
 import npmIcon from '../asset/npm.svg'
 import githubIcon from '../asset/github.png'
+
+const Title = ({ title }: { title: ReactChild }) => {
+  if (typeof title === 'string') {
+    return <h1>{title}</h1>
+  }
+
+  return title as ReactElement
+}
 
 const wrapperStyles = {
   fontFamily: 'sans-serif',
@@ -16,32 +24,46 @@ const navStyles = {
   flex: 1,
   justifyContent: 'flex-end',
   alignItems: 'center',
+  flexWrap: 'wrap' as 'wrap',
 }
 
 const linkStyles = (end: boolean) => ({
   width: 30,
   height: 30,
   marginLeft: end ? 0 : 10,
+  display: 'block',
 })
 
 interface Props {
-  title?: string
+  title?: string | ReactChild
   npm?: string
   github?: string
+  icons?: ReactChild
   children: ReactNode
 }
 
-export const Exmpl = ({ title = 'Demo', npm, github, children }: Props) => (
+export const Exmpl = ({
+  title = 'Demo',
+  npm,
+  github,
+  icons,
+  children,
+}: Props) => (
   <div style={wrapperStyles}>
     <header style={headerStyles}>
-      <h1>{title}</h1>
+      <Title title={title} />
       <nav style={navStyles}>
-        <a href={`https://npmjs.com/${npm}`}>
-          <img alt="npm Link" style={linkStyles(true)} src={npmIcon} />
-        </a>
-        <a href={`https://github.com/${github}`}>
-          <img alt="github Link" style={linkStyles(false)} src={githubIcon} />
-        </a>
+        {icons}
+        {npm && (
+          <a href={`https://npmjs.com/${npm}`}>
+            <img alt="npm Link" style={linkStyles(true)} src={npmIcon} />
+          </a>
+        )}
+        {github && (
+          <a href={`https://github.com/${github}`}>
+            <img alt="github Link" style={linkStyles(false)} src={githubIcon} />
+          </a>
+        )}
       </nav>
     </header>
     {children}

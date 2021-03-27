@@ -7,6 +7,7 @@ Quickly create stylish previews for your digital creations
 > See the [Version 1](https://github.com/tobua/exmpl/tree/release/1.0.3) branch for the old CSS based version documentation.
 
 [![exmpl Demo](https://img.shields.io/static/v1?label=exmpl&message=Demo&color=brightgreen)](https://tobua.github.io/exmpl)
+[![npm](https://img.shields.io/npm/v/exmpl)](https://npmjs.com/exmpl)
 
 ## Installation & Usage
 
@@ -14,7 +15,7 @@ Quickly create stylish previews for your digital creations
 npm i exmpl
 ```
 
-```jsx
+```tsx
 import React from 'react'
 import { render } from 'react-dom'
 import { Exmpl, Code } from 'exmpl'
@@ -27,4 +28,14 @@ render(
   </Exmpl>,
   document.body
 )
+```
+
+`title` can be any React element, npm and github are optional and can be preprended with further icons.
+
+```tsx
+<Exmpl
+  title={<h4>Title</h4>}
+  icons={<a href="google.com">Google</a>}
+  npm="exmpl"
+/>
 ```
