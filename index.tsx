@@ -3,6 +3,12 @@ import React, { ReactNode, ReactChild, ReactElement } from 'react'
 import npmIcon from '../asset/npm.svg'
 import githubIcon from '../asset/github.png'
 
+export { Code } from './markup/Code'
+export { Button } from './markup/Button'
+export { Input } from './markup/Input'
+export { Grid } from './markup/Grid'
+export { Tabs } from './markup/Tabs'
+
 const Title = ({ title }: { title: ReactChild }) => {
   if (typeof title === 'string') {
     return <h1>{title}</h1>
@@ -13,7 +19,7 @@ const Title = ({ title }: { title: ReactChild }) => {
 
 const wrapperStyles = {
   fontFamily: 'sans-serif',
-  maxWidth: '75vw',
+  maxWidth: window.innerWidth < 750 ? '95vw' : '75vw',
   margin: '0 auto',
 }
 
@@ -68,17 +74,4 @@ export const Exmpl = ({
     </header>
     {children}
   </div>
-)
-
-const codeStyles = {
-  fontFamily: 'monospace',
-  border: '1px solid black',
-  borderRadius: 8,
-  padding: 10,
-  boxShadow: 'inset 0 0 3px #000000',
-  overflow: 'auto',
-}
-
-export const Code = ({ children }: { children: string }) => (
-  <pre style={codeStyles}>{children}</pre>
 )

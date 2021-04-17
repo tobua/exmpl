@@ -39,3 +39,7 @@ render(
   npm="exmpl"
 />
 ```
+
+## Elements
+
+Includes `Button`, `Input`, `Grid`, `Code` and `Tabs` elements, refer to the [Demo](https://github.com/tobua/exmpl/blob/master/demo/index.tsx) for usage documentation.
