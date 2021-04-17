@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/tobua/exmpl/compare/v2.1.0...v2.2.0) (2021-04-17)
+
+
+### Features
+
+* **element:** add some basic UI elements ([06c5e8e](https://github.com/tobua/exmpl/commit/06c5e8ef55342795e5300c9b80ec3674acd49b6b))
+
 ## [2.1.0](https://github.com/tobua/exmpl/compare/v2.0.1...v2.1.0) (2021-03-27)
 
 
