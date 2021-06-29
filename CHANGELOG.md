@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/tobua/exmpl/compare/v2.2.0...v2.2.1) (2021-06-29)
+
+
+### Bug Fixes
+
+* **input:** make sure value updates on prop changes ([ad65d36](https://github.com/tobua/exmpl/commit/ad65d3669bc023062c325af86843d8a78c0a818d))
+
 ## [2.2.0](https://github.com/tobua/exmpl/compare/v2.1.0...v2.2.0) (2021-04-17)
 
 
