@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from 'react'
+import React, { CSSProperties, useState, useEffect } from 'react'
 
 const wrapperStyles: CSSProperties = {
   display: 'inline-flex',
@@ -40,6 +40,10 @@ export const Input = ({
   ...props
 }: InputProps & { label?: string; onValue?: (value: any) => void }) => {
   const [currentValue, setCurrentValue] = useState(value ?? '')
+
+  useEffect(() => {
+    setCurrentValue(value)
+  }, [value])
 
   return (
     <div style={{ ...wrapperStyles, ...style }}>

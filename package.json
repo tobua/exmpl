@@ -35,8 +35,8 @@
     "asset"
   ],
   "devDependencies": {
-    "@types/react": "^17.0.3",
-    "padua": "^0.3.5"
+    "@types/react": "^17.0.11",
+    "padua": "^0.3.7"
   },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {
