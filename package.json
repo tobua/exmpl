@@ -1,14 +1,14 @@
 {
   "name": "exmpl",
   "description": "React components to quickly demonstrate and document your creation.",
-  "version": "2.2.1",
+  "version": "0.0.0-development",
   "repository": "github:tobua/exmpl",
   "homepage": "https://tobua.github.io/exmpl",
   "license": "MIT",
   "author": "Matthias Giger",
   "scripts": {
-    "start": "padua watch",
-    "build": "padua build"
+    "build": "padua build",
+    "start": "padua watch"
   },
   "padua": {
     "esbuild": {
@@ -24,19 +24,26 @@
     }
   },
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": "^18.0.0"
   },
-  "main": "dist/index.js",
   "sideEffects": false,
+  "main": "dist/index.js",
+  "exports": {
+    "default": "./dist/index.js"
+  },
   "source": "index.tsx",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
     "asset"
   ],
+  "keywords": [
+    "example",
+    "demo"
+  ],
   "devDependencies": {
-    "@types/react": "^17.0.11",
-    "padua": "^0.3.7"
+    "@types/react": "^17.0.43",
+    "padua": "^0.5.4"
   },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {

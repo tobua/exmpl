@@ -1,21 +1,19 @@
-import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Exmpl, Code, Button, Input, Grid, Tabs } from 'exmpl'
 
 const usageCode = `import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Exmpl, Code } from 'exmpl'
 
-render(
+createRoot(document.body).render(
   <Exmpl title="exmpl Demo" npm="exmpl" github="tobua/exmpl">
     <p>This is the introduction.</p>
     <h2>Installation & Usage</h2>
     <Code>{\`npm i exmpl\`}</Code>
-  </Exmpl>,
-  document.body
+  </Exmpl>
 )`
 
-render(
+createRoot(document.body).render(
   <Exmpl title="exmpl Demo" npm="exmpl" github="tobua/exmpl">
     <p>React Components to quickly create a preview.</p>
     <h2>Installation & Usage</h2>
@@ -40,6 +38,5 @@ render(
     </Tabs>
     <h3>Code</h3>
     <Code>{`npm i exmpl`}</Code>
-  </Exmpl>,
-  document.body
+  </Exmpl>
 )
