@@ -1,4 +1,4 @@
-import React, { ReactNode, ReactChild, ReactElement } from 'react'
+import type { ReactNode, ReactChild, ReactElement } from 'react'
 // Relative to dist folder after build.
 import npmIcon from '../asset/npm.svg'
 import githubIcon from '../asset/github.png'
@@ -9,7 +9,7 @@ export { Input } from './markup/Input'
 export { Grid } from './markup/Grid'
 export { Tabs } from './markup/Tabs'
 
-const Title = ({ title }: { title: ReactChild }) => {
+function Title({ title }: { title: ReactChild }) {
   if (typeof title === 'string') {
     return <h1>{title}</h1>
   }
@@ -48,30 +48,26 @@ interface Props {
   children: ReactNode
 }
 
-export const Exmpl = ({
-  title = 'Demo',
-  npm,
-  github,
-  icons,
-  children,
-}: Props) => (
-  <div style={wrapperStyles}>
-    <header style={headerStyles}>
-      <Title title={title} />
-      <nav style={navStyles}>
-        {icons}
-        {npm && (
-          <a href={`https://npmjs.com/${npm}`}>
-            <img alt="npm Link" style={linkStyles(true)} src={npmIcon} />
-          </a>
-        )}
-        {github && (
-          <a href={`https://github.com/${github}`}>
-            <img alt="github Link" style={linkStyles(false)} src={githubIcon} />
-          </a>
-        )}
-      </nav>
-    </header>
-    {children}
-  </div>
-)
+export function Exmpl({ title = 'Demo', npm, github, icons, children }: Props) {
+  return (
+    <div style={wrapperStyles}>
+      <header style={headerStyles}>
+        <Title title={title} />
+        <nav style={navStyles}>
+          {icons}
+          {npm && (
+            <a href={`https://npmjs.com/${npm}`}>
+              <img alt="npm Link" style={linkStyles(true)} src={npmIcon} />
+            </a>
+          )}
+          {github && (
+            <a href={`https://github.com/${github}`}>
+              <img alt="github Link" style={linkStyles(false)} src={githubIcon} />
+            </a>
+          )}
+        </nav>
+      </header>
+      {children}
+    </div>
+  )
+}

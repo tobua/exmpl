@@ -38,5 +38,5 @@ createRoot(document.body).render(
     </Tabs>
     <h3>Code</h3>
     <Code>{`npm i exmpl`}</Code>
-  </Exmpl>
+  </Exmpl>,
 )

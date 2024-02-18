@@ -1,4 +1,4 @@
-import React, { useState, CSSProperties } from 'react'
+import { useState, type CSSProperties } from 'react'
 
 const wrapperStyle = {
   display: 'flex',
@@ -13,37 +13,22 @@ const buttonStyles = (active: boolean) =>
     fontWeight: active ? 'bold' : 'normal',
     cursor: active ? 'auto' : 'pointer',
     padding: '10px 0',
-  } as CSSProperties)
-
-type DivProps = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
->
-
-type CustomDivProps = Omit<DivProps, 'onChange'>
+  }) as CSSProperties
 
 type Props = {
   labels: string[]
   initialTab?: number
   onChange?: (label: string, index: number) => void
-} & CustomDivProps
+} & Omit<JSX.IntrinsicElements['div'], 'onChange'>
 
-export const Tabs = ({
-  labels,
-  children,
-  initialTab = 0,
-  style = {},
-  onChange,
-  ...props
-}: Props) => {
+export function Tabs({ labels, children, initialTab = 0, style = {}, onChange, ...props }: Props) {
   const [index, setIndex] = useState(initialTab)
 
   if (!children || !Array.isArray(children) || children.length === 0) {
     return null
   }
 
-  const content =
-    index in children ? children[index] : <p>Content not found.</p>
+  const content = index in children ? children[index] : <p>Content not found.</p>
 
   return (
     <>

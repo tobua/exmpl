@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState, useEffect } from 'react'
+import { type CSSProperties, useState, useEffect } from 'react'
 
 const wrapperStyles: CSSProperties = {
   display: 'inline-flex',
@@ -26,20 +26,15 @@ const inputStyles = {
 
 const generateRandomID = () => Math.random().toString(36).substr(2, 9)
 
-type InputProps = React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
->
-
-export const Input = ({
+export function Input({
   id = generateRandomID(),
-  value,
+  value = '',
   style = {},
   onChange,
   onValue,
   ...props
-}: InputProps & { label?: string; onValue?: (value: any) => void }) => {
-  const [currentValue, setCurrentValue] = useState(value ?? '')
+}: JSX.IntrinsicElements['input'] & { label?: string; onValue?: (value: any) => void }) {
+  const [currentValue, setCurrentValue] = useState(value)
 
   useEffect(() => {
     setCurrentValue(value)

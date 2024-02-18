@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 
 const wrapperStyle: CSSProperties = {
   display: 'flex',
@@ -9,12 +9,7 @@ const elementStyle = {
   flex: '1 1 0%',
 }
 
-type Props = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
->
-
-export const Grid = ({ style = {}, children, ...props }: Props) => {
+export function Grid({ style = {}, children, ...props }: JSX.IntrinsicElements['div']) {
   if (!children || !Array.isArray(children) || children.length === 0) {
     return null
   }

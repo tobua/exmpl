@@ -1,5 +1,3 @@
-import React from 'react'
-
 const codeStyles = {
   fontFamily: 'monospace',
   // Firefox has less line height otherwise.
@@ -9,17 +7,14 @@ const codeStyles = {
   background: '#EEEEEE',
 }
 
-type PreProps = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLPreElement>,
-  HTMLPreElement
->
-
-export const Code = ({
+export function Code({
   style = {},
   children,
   ...props
-}: PreProps & { children: string }) => (
-  <pre style={{ ...codeStyles, ...style }} {...props}>
-    {children}
-  </pre>
-)
+}: JSX.IntrinsicElements['pre'] & { children: string }) {
+  return (
+    <pre style={{ ...codeStyles, ...style }} {...props}>
+      {children}
+    </pre>
+  )
+}

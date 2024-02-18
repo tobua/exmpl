@@ -7,8 +7,7 @@
   "license": "MIT",
   "author": "Matthias Giger",
   "scripts": {
-    "build": "padua build",
-    "start": "padua watch"
+    "build": "padua build"
   },
   "padua": {
     "esbuild": {
@@ -18,21 +17,36 @@
       ]
     },
     "tsconfig": {
+      "compilerOptions": {
+        "jsx": "react-jsx"
+      },
       "include": [
         "declarations.d.ts"
       ]
     }
   },
+  "devDependencies": {
+    "@types/react": "^18.2.56",
+    "padua": "^2.0.10"
+  },
   "peerDependencies": {
-    "react": "^18.0.0"
+    "react": ">= 18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
   },
   "sideEffects": false,
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "exports": {
-    "default": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
   },
-  "source": "index.tsx",
-  "types": "dist/index.d.ts",
+  "source": "./index.tsx",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "asset"
@@ -41,15 +55,17 @@
     "example",
     "demo"
   ],
-  "devDependencies": {
-    "@types/react": "^17.0.43",
-    "padua": "^0.5.4"
-  },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {
-    "extends": "./node_modules/padua/configuration/eslint.cjs"
+    "extends": "./node_modules/padua/configuration/eslint.cjs",
+    "rules": {
+      "react/react-in-jsx-scope": 0
+    }
+  },
+  "publishConfig": {
+    "provenance": true
   },
   "engines": {
-    "node": ">= 14"
+    "node": ">= 18"
   }
 }

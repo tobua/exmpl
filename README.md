@@ -1,19 +1,14 @@
 # exmpl
 
-<img align="right" src="https://raw.githubusercontent.com/tobua/exmpl/main/logo.svg?sanitize=true" width="20%" alt="exmpl" />
+<img align="right" src="https://raw.githubusercontent.com/tobua/exmpl/main/logo.svg" width="20%" alt="exmpl" />
 
 Quickly create stylish previews for your digital creations
 
-> See the [Version 1](https://github.com/tobua/exmpl/tree/release/1.0.3) branch for the old CSS based version documentation.
+- For packages published to npm or on GitHub
+- Quick way to scaffold a preview or demo
+- `Button`, `Input`, `Grid`, `Code` and `Tabs` elements
 
-[![exmpl Demo](https://img.shields.io/static/v1?label=exmpl&message=Demo&color=brightgreen)](https://tobua.github.io/exmpl)
-[![npm](https://img.shields.io/npm/v/exmpl)](https://npmjs.com/exmpl)
-
-## Installation & Usage
-
-```
-npm i exmpl
-```
+## Usage with React
 
 ```tsx
 import React from 'react'

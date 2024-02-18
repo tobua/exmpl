@@ -1,5 +1,3 @@
-import React from 'react'
-
 const styles = {
   background: 'black',
   color: 'white',
@@ -10,12 +8,6 @@ const styles = {
   height: 40,
 }
 
-type ButtonProps = React.DetailedHTMLProps<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->
-
-export const Button = ({ type, style = {}, ...props }: ButtonProps) => (
-  // eslint-disable-next-line react/button-has-type
-  <button style={{ ...styles, ...style }} type={type ?? 'button'} {...props} />
-)
+export function Button({ type, style = {}, ...props }: JSX.IntrinsicElements['button']) {
+  return <button type="button" style={{ ...styles, ...style }} {...props} />
+}
